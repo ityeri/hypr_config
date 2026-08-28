@@ -1,0 +1,4 @@
+{
+  "workspace": { "library": ["/nix/store/<...>-hyprland-0.56.2/share/hypr/stubs"] },
+  "diagnostics": { "globals": ["hl"] }
+}
