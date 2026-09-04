@@ -1,19 +1,19 @@
-hl.monitor({
-  output   = "HDMI-A-1",
-  mode     = "1920x1080@100.0",
-  position = "840x312",
-  scale    = 1.0
-})
+hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-1", default = true })
 hl.monitor({
   output    = "HDMI-A-1",
+  mode      = "1920x1080@100.0",
+  position  = "840x312",
+  scale     = 1.0,
   transform = 1 -- 90 degrees (rotated)
 })
+hl.workspace_rule({ workspace = "2", monitor = "DP-1", default = true })
 hl.monitor({
   output   = "DP-1",
   mode     = "2560x1080@144.0",
   position = "1920x426",
   scale    = 1.0
 })
+hl.workspace_rule({ workspace = "3", monitor = "DP-2", default = true })
 hl.monitor({
   output   = "DP-2",
   mode     = "2560x1440@60.0",

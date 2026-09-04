@@ -35,3 +35,23 @@ hl.device({
   name = "epic-mouse-v1",
   sensitivity = -0.5
 })
+
+hl.on(
+  "hyprland.start",
+  function()
+    hl.dispatch(hl.dsp.focus({ workspace = 2 }))
+
+    hl.timer(
+      function()
+        local m = hl.get_active_monitor()
+        if m then
+          hl.dispatch(hl.dsp.cursor.move({
+            x = m.x + m.width / m.scale / 2,
+            y = m.y + m.height / m.scale / 2
+          }))
+        end
+      end,
+      { timeout = 20, type = "oneshot" }
+    )
+  end
+)
